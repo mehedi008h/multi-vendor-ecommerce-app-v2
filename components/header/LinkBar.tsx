@@ -67,8 +67,8 @@ const LinkBar = () => {
     const [category, setCategory] = useState<string>("");
 
     return (
-        <div className="w-full linkBar relative">
-            <div className="container h-14 xl:flex lg:flex md:flex hidden justify-start items-center gap-8 relative">
+        <div className="w-full linkBar xl:block lg:block hidden sticky top-0">
+            <div className="container h-14 flex justify-start items-center gap-8 relative">
                 {/* Browse All Category  */}
                 <DropdownMenu>
                     <DropdownMenuTrigger className="outline-none">

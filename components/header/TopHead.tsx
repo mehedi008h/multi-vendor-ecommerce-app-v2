@@ -4,7 +4,7 @@ import { IoCallOutline } from "react-icons/io5";
 
 const TopHead = () => {
     return (
-        <div className="w-full border-b">
+        <div className="w-full border-b xl:block lg:block hidden">
             <div className="container h-8 flex justify-between items-center font-dmSans">
                 {/* link  */}
                 <div className="flex flex-row gap-4 text-green-700 text-sm">

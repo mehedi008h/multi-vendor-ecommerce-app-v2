@@ -4,3 +4,4 @@ export { default as SearchBar } from "./SearchBar";
 export { default as SearchInput } from "./SearchInput";
 export { default as LinkBar } from "./LinkBar";
 export { default as LinkItem } from "./LinkItem";
+export { default as MobileDrawer } from "./MobileDrawer";

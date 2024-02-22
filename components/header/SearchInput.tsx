@@ -8,7 +8,7 @@ const SearchInput = () => {
     const [searchInput, setSearchInput] = useState("");
 
     return (
-        <div className="w-[600px] xl:flex lg:flex md:flex hidden flex-row items-center border border-gray-500 rounded-full px-4 py-1">
+        <div className="w-[600px] xl:flex lg:flex hidden flex-row items-center border border-gray-500 rounded-full px-4 py-1">
             {/* search input  */}
             <input
                 className="px-4 py-1 w-full outline-none text-gray-500 font-dmSans"

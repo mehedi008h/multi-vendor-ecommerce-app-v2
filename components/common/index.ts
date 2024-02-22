@@ -1,1 +1,1 @@
-export * from "./DropdownMenu";
+export { default as ProductContainer } from "./ProductContainer";

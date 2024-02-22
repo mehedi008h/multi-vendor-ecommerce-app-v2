@@ -1,10 +1,13 @@
-import { Button } from "@/components/ui/button";
+import { Banner, Service } from "@/components/home";
+import FeaturedCategories from "@/components/home/category/FeaturedCategories";
 
 export default function Home() {
     return (
-        <main className="h-screen">
-            <h1>Hello from ui</h1>
-            <Button>Hello</Button>
+        <main className="container min-h-screen">
+            {/* hero section  */}
+            <Banner />
+            <Service />
+            <FeaturedCategories />
         </main>
     );
 }

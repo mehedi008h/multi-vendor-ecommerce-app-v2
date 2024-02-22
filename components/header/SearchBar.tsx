@@ -9,19 +9,23 @@ import logo from "../../public/images/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import SearchInput from "./SearchInput";
+import { MobileDrawer } from ".";
 
 const SearchBar = () => {
     // cart open & close
     const [toggle, setToggle] = useState(false);
 
     return (
-        <div className="container h-20 flex justify-between items-center">
-            {/* logo */}
-            <Link href="/">
-                <div className="w-36 h-16">
-                    <Image className="w-full h-full" src={logo} alt="" />
-                </div>
-            </Link>
+        <div className="container h-20 flex justify-between items-center xl:px-0 lg:px-0 px-2">
+            <div className="flex flex-row items-center gap-2">
+                <MobileDrawer />
+                {/* logo */}
+                <Link href="/">
+                    <div className="w-36 h-16">
+                        <Image className="w-full h-full" src={logo} alt="" />
+                    </div>
+                </Link>
+            </div>
             {/* search */}
             <SearchInput />
             {/* link  */}
