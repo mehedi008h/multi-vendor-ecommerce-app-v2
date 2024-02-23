@@ -1,4 +1,9 @@
-import { EventSlider, FilterBar, FilterSidebar } from "@/components/shop";
+import {
+    EventSlider,
+    FilterBar,
+    FilterSidebar,
+    Products,
+} from "@/components/shop";
 
 const ShopPage = () => {
     return (
@@ -9,6 +14,7 @@ const ShopPage = () => {
             <div className="col-span-9">
                 <EventSlider />
                 <FilterBar />
+                <Products />
             </div>
         </div>
     );
