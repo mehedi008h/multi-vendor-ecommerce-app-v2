@@ -1,14 +1,13 @@
 import React from "react";
 import { ProductCard } from ".";
+import { products } from "@/data/products";
 
 const Products = () => {
     return (
         <div className="grid grid-cols-12 gap-3">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            {products.map((product) => (
+                <ProductCard key={product.id} product={product} />
+            ))}
         </div>
     );
 };
