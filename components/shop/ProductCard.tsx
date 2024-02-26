@@ -1,3 +1,5 @@
+"use client";
+
 import { placeHolder } from "@/data/images";
 import Image from "next/image";
 import React from "react";
@@ -7,16 +9,28 @@ import { Button } from "../ui/button";
 import { AiFillStar, AiOutlineEye, AiOutlineStar } from "react-icons/ai";
 import { ProductCardButton } from ".";
 import Link from "next/link";
+import { Product } from "@/types";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/redux/slices/cartSlice";
 
-const ProductCard = () => {
+interface Props {
+    product: Product;
+}
+
+const ProductCard = ({ product }: Props) => {
+    const dispatch = useDispatch();
+
+    const handleAddToCart = (item: Product) => {
+        dispatch(addToCart(item));
+    };
     return (
         <div className="col-span-3 bg-white border border-gray-200 rounded-md p-3 group">
             {/* product image  */}
             <div className="relative transition-all delay-700">
-                <Image src={placeHolder} alt="product" />
+                <Image src={product.image} alt="product" />
 
                 <div className="bg-orange-500 text-white text-xs font-light py-1 px-2 rounded-xl absolute top-0 left-0">
-                    -50%
+                    -{product.discount}%
                 </div>
 
                 {/* right side => button bar */}
@@ -44,7 +58,7 @@ const ProductCard = () => {
                 </p>
                 <Link href={"/"}>
                     <h5 className="font-semibold text-sm text-primary">
-                        Dell Optiplex 9020 Small Form Business Desktop
+                        {product.name}
                     </h5>
                 </Link>
                 {/* rating  */}
@@ -59,14 +73,17 @@ const ProductCard = () => {
                 {/* price  */}
                 <div className="flex items-center gap-2">
                     <h5 className="font-semibold text-xl text-primary">
-                        $ 284.50
+                        $ {product.price}
                     </h5>
                     <h5 className="font-semibold text-base text-secondary line-through">
                         $ 284.50
                     </h5>
                 </div>
 
-                <Button className="w-full bg-transparent text-primary border border-primary hover:bg-primary hover:text-white mt-2">
+                <Button
+                    onClick={() => handleAddToCart(product)}
+                    className="w-full bg-transparent text-primary border border-primary hover:bg-primary hover:text-white mt-2"
+                >
                     Add to cart
                 </Button>
             </div>

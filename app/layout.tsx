@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "./globals.css";
 import { Navbar } from "@/components/header";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Providers } from "@/redux/provider";
+import { ToastContainer } from "react-toastify";
+
+import "./globals.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const poppins = Poppins({
     subsets: ["latin"],
@@ -22,10 +26,13 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={poppins.className}>
-                <TooltipProvider>
-                    <Navbar />
-                    <main className="py-4">{children}</main>{" "}
-                </TooltipProvider>
+                <Providers>
+                    <ToastContainer />
+                    <TooltipProvider>
+                        <Navbar />
+                        <main className="py-4">{children}</main>{" "}
+                    </TooltipProvider>
+                </Providers>
             </body>
         </html>
     );
