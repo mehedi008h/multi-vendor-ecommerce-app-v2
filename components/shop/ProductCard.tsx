@@ -24,7 +24,7 @@ const ProductCard = ({ product }: Props) => {
         dispatch(addToCart(item));
     };
     return (
-        <div className="col-span-3 bg-white border border-gray-200 rounded-md p-3 group">
+        <div className="xl:col-span-3 lg:col-span-4 md:col-span-4 sm:col-span-6 col-span-12 bg-white border border-gray-200 rounded-md p-3 group">
             {/* product image  */}
             <div className="relative transition-all delay-700">
                 <Image src={product.image} alt="product" />

@@ -23,7 +23,7 @@ const FilterSidebar = () => {
     let prices = priceExpand ? priceRanges : priceRanges.slice(0, 5);
     let brands = brandExpand ? allBrands : allBrands.slice(0, 5);
     return (
-        <div>
+        <div className="xl:block hidden">
             {/* Product Category  */}
             <div className="border rounded-md">
                 <h1 className="font-medium text-lg text-primary p-2 mt-2">

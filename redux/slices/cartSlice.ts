@@ -9,10 +9,11 @@ interface CartState {
     cartTotalAmount: number;
 }
 
+// localStorage.getItem("cartItems")
+//         ? JSON.parse(localStorage.getItem("cartItems")!)
+//         :
 const initialState: CartState = {
-    cartItems: localStorage.getItem("cartItems")
-        ? JSON.parse(localStorage.getItem("cartItems")!)
-        : [],
+    cartItems: [],
     cartTotalQuantity: 0,
     cartTotalAmount: 0,
 };
