@@ -1,12 +1,12 @@
 import { Heading } from "@/components/common";
 import { FilterBar } from "@/components/shop";
 import { Button } from "@/components/ui/button";
-import { VendorSidebar } from "@/components/vendors";
+import { VendorSidebar, Vendors } from "@/components/vendors";
 import React from "react";
 
 const VendorsPage = () => {
     return (
-        <div className="container">
+        <div className="container xl:px-0 px-2">
             {/* heading  */}
             <Heading
                 title="Vendors Listing"
@@ -21,11 +21,12 @@ const VendorsPage = () => {
             {/* vendors container  */}
             <div className="grid grid-cols-12 mt-5 gap-5">
                 {/* sidebar  */}
-                <div className="col-span-3">
+                <div className="xl:col-span-3 col-span-12">
                     <VendorSidebar />
                 </div>
-                <div className="col-span-9">
+                <div className="xl:col-span-9 col-span-12">
                     <FilterBar />
+                    <Vendors />
                 </div>
             </div>
         </div>
