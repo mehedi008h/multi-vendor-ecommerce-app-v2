@@ -39,7 +39,7 @@ const categories = [
     {
         id: 4,
         name: "Vendors",
-        link: "/",
+        link: "/vendors",
     },
     {
         id: 5,
