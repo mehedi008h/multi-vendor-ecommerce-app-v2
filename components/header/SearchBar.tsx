@@ -8,8 +8,11 @@ import Link from "next/link";
 import SearchInput from "./SearchInput";
 import { MobileDrawer } from ".";
 import { Cart } from "../cart";
+import { useState } from "react";
 
 const SearchBar = () => {
+    // state
+    const [searchInput, setSearchInput] = useState("");
     return (
         <div className="container h-20 flex justify-between items-center xl:px-0 lg:px-0 px-2">
             <div className="flex flex-row items-center gap-2">
@@ -22,7 +25,7 @@ const SearchBar = () => {
                 </Link>
             </div>
             {/* search */}
-            <SearchInput />
+            <SearchInput setSearchInput={setSearchInput} />
             {/* link  */}
             <div className="flex flex-row gap-4">
                 {/* white list  */}

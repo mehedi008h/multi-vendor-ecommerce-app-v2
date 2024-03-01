@@ -5,7 +5,6 @@ import Image from "next/image";
 import { placeHolder } from "@/data/images";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { FaRegEye } from "react-icons/fa";
-import { Button } from "../ui/button";
 
 const Vendor = () => {
     return (
@@ -27,8 +26,8 @@ const Vendor = () => {
                     <p className="text-sm text-secondary">(225)</p>
                 </div>
 
-                <div className="bg-primary px-4 py-1 rounded-2xl text-white text-sm absolute top-2 right-3 cursor-pointer hidden group-hover:block">
-                    360 Product
+                <div className="bg-primary px-4 py-1 rounded-2xl text-white text-sm items-center gap-2 absolute top-2 right-3 cursor-pointer hidden group-hover:flex">
+                    <FaRegEye /> 360 Product
                 </div>
             </div>
             <div className="mt-5 p-3">

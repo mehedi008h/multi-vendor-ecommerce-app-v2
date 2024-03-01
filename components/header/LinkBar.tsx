@@ -1,11 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import {
-    MdKeyboardArrowDown,
-    MdKeyboardArrowUp,
-    MdOutlineDashboard,
-} from "react-icons/md";
+import { MdKeyboardArrowDown, MdOutlineDashboard } from "react-icons/md";
 import { BsFire } from "react-icons/bs";
 
 import {
@@ -67,7 +63,7 @@ const LinkBar = () => {
     const [category, setCategory] = useState<string>("");
 
     return (
-        <div className="w-full linkBar xl:block lg:block hidden sticky top-0 z-50">
+        <div className="w-full linkBar xl:block lg:block hidden sticky top-0 z-40">
             <div className="container h-14 flex justify-start items-center gap-8 relative">
                 {/* Browse All Category  */}
                 <DropdownMenu>

@@ -32,7 +32,7 @@ const Modal = forwardRef<HTMLDivElement, Props>(
 
         return (
             <div
-                className={`h-screen bg-black bg-opacity-80 w-full flex justify-end fixed z-20 transition-opacity ease-in-out duration-300 top-0 right-0 overflow-x-hidden
+                className={`h-screen bg-black bg-opacity-80 w-full flex justify-end fixed z-50 transition-opacity ease-in-out duration-300 top-0 right-0 overflow-x-hidden
             overflow-y-scroll hide-scroll-bar translate ${
                 open ? "opacity-100 visible " : "opacity-0 invisible "
             }`}
