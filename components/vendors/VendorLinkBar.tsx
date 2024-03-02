@@ -21,7 +21,7 @@ const VendorLinkBar = ({ selectedTab, setSelectedTab }: Props) => {
     // state
     const [searchInput, setSearchInput] = useState("");
     return (
-        <div className="w-full h-14 mt-32 bg-neutral-50 sticky top-14 z-40">
+        <div className="w-full h-14 mt-32 glass sticky top-14 transition duration-700 z-40">
             <div className="container h-14 flex justify-between items-center">
                 {/* links  */}
                 <div className="flex flex-row items-center gap-5">
@@ -33,7 +33,7 @@ const VendorLinkBar = ({ selectedTab, setSelectedTab }: Props) => {
                                         Category
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
-                                        <div className="bg-white w-[200px] py-2 mt-4">
+                                        <div className="bg-white w-[200px] py-2">
                                             {allCategories.map((category) => (
                                                 <div
                                                     key={category}
@@ -68,7 +68,7 @@ const VendorLinkBar = ({ selectedTab, setSelectedTab }: Props) => {
                 <div>
                     <SearchInput
                         setSearchInput={setSearchInput}
-                        className="w-[300px] bg-white"
+                        className="w-[300px] bg-white border-neutral-300"
                     />
                 </div>
             </div>

@@ -12,7 +12,7 @@ const Vendor = () => {
             <div className="w-full h-36 relative">
                 <Image className="h-36 object-cover" src={placeHolder} alt="" />
                 <Image
-                    className="h-12 w-20 absolute left-4 -bottom-4 border border-primary rounded-md"
+                    className="h-12 w-20 object-cover absolute left-4 -bottom-4 border border-primary rounded-md"
                     src={placeHolder}
                     alt=""
                 />
