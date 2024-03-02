@@ -39,7 +39,8 @@ const VendorDetails = () => {
                         src={placeHolder}
                         alt=""
                     />
-                    <div className="w-full flex justify-between items-end">
+
+                    <div className="w-full flex justify-between items-end gap-3">
                         <div>
                             <h4 className="text-lg font-medium text-primary">
                                 Shop Name
@@ -53,7 +54,7 @@ const VendorDetails = () => {
                         </div>
 
                         {/* vendor chat & follow button  */}
-                        <div className="flex gap-3">
+                        <div className="xl:flex lg:flex md:flex hidden gap-3 xl:pr-0 pr-2">
                             <Button
                                 variant="outline"
                                 className="text-primary flex gap-1"
@@ -67,7 +68,18 @@ const VendorDetails = () => {
                     </div>
                 </div>
             </div>
-
+            {/* vendor chat & follow button  */}
+            <div className="xl:hidden lg:hidden md:hidden flex gap-3 xl:pr-0 pr-2 mt-24 px-2">
+                <Button
+                    variant="outline"
+                    className="text-primary flex gap-1 w-full"
+                >
+                    <MdOutlineStorefront size={20} /> Follow
+                </Button>
+                <Button className="text-white flex gap-1">
+                    <IoChatboxEllipsesOutline size={20} /> Chat Now
+                </Button>
+            </div>
             <VendorLinkBar
                 selectedTab={selectedTab}
                 setSelectedTab={setSelectedTab}
