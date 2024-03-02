@@ -15,7 +15,7 @@ const VendoreProfile = () => {
         <div>
             <div className="grid grid-cols-12 gap-5 mt-4">
                 <div className="col-span-3">
-                    <h5 className="text-base font-medium">
+                    <h5 className="text-base font-medium text-primary">
                         Positive Seller Ratings
                     </h5>
                     <h1 className="text-5xl font-semibold mt-4">83 %</h1>
@@ -32,7 +32,7 @@ const VendoreProfile = () => {
                 </div>
                 <div className="col-span-9">
                     <div className="flex justify-between items-center">
-                        <h5 className="text-base font-medium">
+                        <h5 className="text-base font-medium text-primary">
                             Product Ratings and Reviews (16951)
                         </h5>
                         <div className="flex items-center gap-3">
