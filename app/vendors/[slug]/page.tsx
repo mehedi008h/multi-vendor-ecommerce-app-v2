@@ -37,7 +37,7 @@ const VendorDetails = () => {
                 selectedTab={selectedTab}
                 setSelectedTab={setSelectedTab}
             />
-            <div className="container mt-32 h-[300vh]">
+            <div className="container mt-4 h-[300vh]">
                 {selectedTab === Tab.HOME && <VendoreHome />}
                 {selectedTab === Tab.PRODUCTS && <VendoreProducts />}
                 {selectedTab === Tab.PROFILE && <VendoreProfile />}
