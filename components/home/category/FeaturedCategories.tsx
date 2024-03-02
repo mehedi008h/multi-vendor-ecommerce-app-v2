@@ -5,7 +5,7 @@ import { CategorySlider } from "..";
 
 const FeaturedCategories = () => {
     const rightHeader = (
-        <Button className="bg-gradient-to-r from-cyan-500 to-blue-500">
+        <Button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
             View All
         </Button>
     );
