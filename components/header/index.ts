@@ -5,3 +5,5 @@ export { default as SearchInput } from "./SearchInput";
 export { default as LinkBar } from "./LinkBar";
 export { default as LinkItem } from "./LinkItem";
 export { default as MobileDrawer } from "./MobileDrawer";
+export { default as UserMenu } from "./UserMenu";
+export { default as SearchModal } from "./SearchModal";

@@ -30,7 +30,7 @@ export default function RootLayout({
                     <ToastContainer />
                     <TooltipProvider>
                         <Navbar />
-                        <main className="py-4">{children}</main>{" "}
+                        <main className="py-4">{children}</main>
                     </TooltipProvider>
                 </Providers>
             </body>

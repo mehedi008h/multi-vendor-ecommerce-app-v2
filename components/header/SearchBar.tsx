@@ -1,18 +1,16 @@
 "use client";
 
-import { BiUser } from "react-icons/bi";
+import { BiSearchAlt, BiUser } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 import logo from "../../public/images/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import SearchInput from "./SearchInput";
-import { MobileDrawer } from ".";
+import { MobileDrawer, SearchModal, UserMenu } from ".";
 import { Cart } from "../cart";
 import { useState } from "react";
 
 const SearchBar = () => {
-    // state
-    const [searchInput, setSearchInput] = useState("");
     return (
         <div className="container h-20 flex justify-between items-center xl:px-0 lg:px-0 px-2">
             <div className="flex flex-row items-center gap-2">
@@ -25,7 +23,23 @@ const SearchBar = () => {
                 </Link>
             </div>
             {/* search */}
-            <SearchInput setSearchInput={setSearchInput} />
+            <SearchModal
+                triggerButton={
+                    <div className="w-[600px] xl:flex lg:flex hidden flex-row justify-between items-center border border-gray-500 rounded-full px-4 py-1">
+                        {/* search input  */}
+                        {/* <input
+                    className="px-4 py-1 w-full outline-none text-gray-500 font-dmSans"
+                    type="text"
+                    name="searchInput"
+                    placeholder="Search products ..."
+                    onChange={(e) => setSearchInput(e.target.value)}
+                /> */}
+                        <p className="text-gray-500">Search products ...</p>
+                        <BiSearchAlt className="text-gray-600" size={30} />
+                    </div>
+                }
+            />
+            {/* <SearchInput setSearchInput={setSearchInput} /> */}
             {/* link  */}
             <div className="flex flex-row gap-4">
                 {/* white list  */}
@@ -42,12 +56,13 @@ const SearchBar = () => {
                 <Cart />
 
                 {/* user menu  */}
-                <Link
+                {/* <Link
                     className="h-12 w-12 flex justify-center items-center border-2 rounded-full hover:text-green-500"
                     href={"/login"}
                 >
                     <BiUser size={25} />
-                </Link>
+                </Link> */}
+                <UserMenu />
             </div>
         </div>
     );

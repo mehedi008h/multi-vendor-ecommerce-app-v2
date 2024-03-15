@@ -1,7 +1,5 @@
 import React from "react";
 import { Rating } from "../common";
-import Image from "next/image";
-import { placeHolder } from "@/data/images";
 import { ReviewHistory } from ".";
 import {
     DropdownMenu,
