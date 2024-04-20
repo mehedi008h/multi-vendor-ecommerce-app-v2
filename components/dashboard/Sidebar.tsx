@@ -1,5 +1,12 @@
 import React from "react";
+import { AiOutlineUser } from "react-icons/ai";
 import { CgMenuGridO } from "react-icons/cg";
+import { FaRegAddressCard } from "react-icons/fa";
+import { IoIosHeart } from "react-icons/io";
+import { IoSettingsOutline, IoWalletOutline } from "react-icons/io5";
+import { LuLayoutList } from "react-icons/lu";
+import { RiStore2Line } from "react-icons/ri";
+import { TbPasswordUser } from "react-icons/tb";
 
 const sidebarLinks = [
     {
@@ -10,42 +17,42 @@ const sidebarLinks = [
     {
         name: "Profile",
         path: "/dashboard/profile",
-        icon: <CgMenuGridO size={20} />,
+        icon: <AiOutlineUser size={20} />,
     },
     {
         name: "Wallet",
         path: "/dashboard/wallet",
-        icon: <CgMenuGridO size={20} />,
+        icon: <IoWalletOutline size={20} />,
     },
     {
         name: "Change Password",
         path: "/dashboard/change-password",
-        icon: <CgMenuGridO size={20} />,
+        icon: <TbPasswordUser size={20} />,
     },
     {
         name: "Whitelist",
         path: "/dashboard/whitelist",
-        icon: <CgMenuGridO size={20} />,
+        icon: <IoIosHeart size={20} />,
     },
     {
         name: "My Order",
         path: "/dashboard/my-order",
-        icon: <CgMenuGridO size={20} />,
+        icon: <LuLayoutList size={20} />,
     },
     {
         name: "Followed Store",
         path: "/dashboard/followed-store",
-        icon: <CgMenuGridO size={20} />,
+        icon: <RiStore2Line size={20} />,
     },
     {
         name: "Setting",
         path: "/dashboard/setting",
-        icon: <CgMenuGridO size={20} />,
+        icon: <IoSettingsOutline size={20} />,
     },
     {
         name: "Address",
         path: "/dashboard/address",
-        icon: <CgMenuGridO size={20} />,
+        icon: <FaRegAddressCard size={20} />,
     },
 ];
 
