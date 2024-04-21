@@ -1,5 +1,7 @@
 import { HorizontalLine } from "@/components/common";
+import { ChangePasswordField } from "@/components/dashboard";
 import React from "react";
+import * as yup from "yup";
 
 const ChangePasswordPage = () => {
     return (
@@ -10,69 +12,27 @@ const ChangePasswordPage = () => {
             </h5>
 
             {/* current password  */}
-            <div className="my-8 grid grid-cols-12 items-center">
-                <div className="col-span-4">
-                    <label
-                        htmlFor="currentPassword"
-                        className="block text-sm font-medium text-gray-700"
-                    >
-                        Current Password
-                    </label>
-                </div>
-                <div className="col-span-4">
-                    <input
-                        type="password"
-                        name="currentPassword"
-                        id="currentPassword"
-                        autoComplete="current-password"
-                        className="focus:ring-indigo-500 focus:border-indigo-500 w-full h-10 sm:text-sm border-neutral-4s00 border-[1px] rounded-md outline-none"
-                    />
-                </div>
-            </div>
+            <ChangePasswordField
+                label="Current Password"
+                id="currentPassword"
+                name="currentPassword"
+            />
             <HorizontalLine className="bg-neutral-200" />
 
             {/* new password  */}
-            <div className="my-8 grid grid-cols-12 items-center">
-                <div className="col-span-4">
-                    <label
-                        htmlFor="newPassword"
-                        className="block text-sm font-medium text-gray-700"
-                    >
-                        New Password
-                    </label>
-                </div>
-                <div className="col-span-4">
-                    <input
-                        type="password"
-                        name="newPassword"
-                        id="newPassword"
-                        autoComplete="current-password"
-                        className="focus:ring-indigo-500 focus:border-indigo-500 w-full h-10 sm:text-sm border-neutral-4s00 border-[1px] rounded-md outline-none"
-                    />
-                </div>
-            </div>
+            <ChangePasswordField
+                label="New Password"
+                id="newPassword"
+                name="newPassword"
+            />
             <HorizontalLine className="bg-neutral-200" />
 
             {/* new password  */}
-            <div className="my-8 grid grid-cols-12 items-center">
-                <div className="col-span-4">
-                    <label
-                        htmlFor="confirmPassword"
-                        className="block text-sm font-medium text-gray-700"
-                    >
-                        Confirm Password
-                    </label>
-                </div>
-                <div className="col-span-4">
-                    <input
-                        type="password"
-                        name="confirmPassword"
-                        id="confirmPassword"
-                        autoComplete="current-password"
-                        className="focus:ring-indigo-500 focus:border-indigo-500 w-full h-10 sm:text-sm border-neutral-4s00 border-[1px] rounded-md outline-none"
-                    />
-                </div>
-            </div>
+            <ChangePasswordField
+                label="Confirm Password"
+                id="confirmPassword"
+                name="confirmPassword"
+            />
 
             {/* button  */}
             <div className="w-full flex justify-end gap-5 mt-10">
