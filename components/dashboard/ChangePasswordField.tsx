@@ -8,7 +8,7 @@ interface Props {
     id: string;
     disabled?: boolean;
     required?: boolean;
-    error?: string;
+    error?: boolean;
     value?: string;
     handleBlur: any;
     handleChange: any;
