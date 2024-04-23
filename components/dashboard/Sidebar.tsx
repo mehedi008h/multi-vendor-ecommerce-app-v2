@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { AiOutlineUser } from "react-icons/ai";
 import { CgMenuGridO } from "react-icons/cg";
@@ -58,14 +59,13 @@ const sidebarLinks = [
 
 const Sidebar = () => {
     return (
-        <div className="w-full h-fit flex flex-col bg-white rounded-md shadow-md">
+        <div className="w-full h-fit flex flex-col bg-neutral-50 rounded-md shadow-md">
             {sidebarLinks.map((link, index) => (
-                <div
-                    className="flex items-center gap-2 text-base font-normal text-neutral-600 hover:bg-neutral-50 hover:text-primary px-3 py-2 cursor-pointer"
-                    key={index}
-                >
-                    {link.icon} <p>{link.name}</p>
-                </div>
+                <Link href={link.path} key={index}>
+                    <div className="flex items-center gap-2 text-base font-normal text-neutral-600 hover:bg-neutral-100 hover:text-primary px-3 py-2 cursor-pointer">
+                        {link.icon} <p>{link.name}</p>
+                    </div>
+                </Link>
             ))}
         </div>
     );
